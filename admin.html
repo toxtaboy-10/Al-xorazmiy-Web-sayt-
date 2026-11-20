@@ -1,0 +1,66 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kirish — Al-Xorazmiy Vorislari</title><script>try{var t=localStorage.getItem('theme');if(!t&&matchMedia('(prefers-color-scheme:dark)').matches)t='dark';document.documentElement.setAttribute('data-theme',t||'light')}catch(e){}</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/admin.css"></head><body class="admin">
+<section id="login" class="login">
+<div class="lbox panel">
+<a class="logo" href="index.html" aria-label="Bosh sahifa"><img class="logo-img" alt="" hidden><b>IT</b><span class="lname">Al-Xorazmiy Vorislari</span></a>
+<h1>Kirish</h1><p>Admin yoki ro'yxatdan o'tgan foydalanuvchi sifatida kiring.</p>
+<form id="lform" novalidate>
+<label>Foydalanuvchi nomi yoki email<input name="username" autocomplete="username" required></label>
+<label>Parol<input name="password" type="password" autocomplete="current-password" required></label>
+<button class="btn" type="submit">Kirish</button>
+<div class="fail" id="lfail" role="alert" hidden></div>
+<p id="lhint" class="demo" hidden><strong>DEMO rejim.</strong> Backend ulanmagan. Kirish: <code>admin</code> / <code>admin12345</code></p>
+</form>
+<p class="lreg">Akkauntingiz yo'qmi? <a class="link" href="register.html">Ro'yxatdan o'ting</a></p>
+<a class="back" href="index.html">&larr; Saytga qaytish</a>
+</div></section>
+
+<div id="me" hidden>
+<header class="atop"><div class="wrap bar">
+<a class="logo" href="index.html" aria-label="Bosh sahifa"><img class="logo-img" alt="" hidden><b>IT</b><span class="lname">Al-Xorazmiy Vorislari</span></a>
+<div class="tools"><a class="btn ghost sm" href="index.html">Saytga qaytish</a><button class="btn sm" id="logout2" type="button">Chiqish</button></div>
+</div></header>
+<main class="wrap amain" style="max-width:720px">
+<div class="panel"><h1 style="font-size:26px;animation:none;margin:0 0 4px">Salom, <span id="me-name" class="grad"></span>!</h1><p>Siz muvaffaqiyatli tizimga kirdingiz. Ma'lumotlaringiz:</p>
+<dl class="mel"><div><dt>Foydalanuvchi nomi</dt><dd id="me-username"></dd></div><div><dt>Email</dt><dd id="me-email"></dd></div><div><dt>Telefon</dt><dd id="me-phone"></dd></div><div><dt>Yo'nalish</dt><dd id="me-course"></dd></div><div><dt>Ro'yxatdan o'tgan sana</dt><dd id="me-date"></dd></div></dl>
+<div class="row" style="margin-top:18px"><a class="btn" href="courses.html">Yo'nalishlar</a><a class="btn ghost" href="news.html">Yangiliklar</a></div></div>
+</main></div>
+
+<div id="app" hidden>
+<header class="atop"><div class="wrap bar">
+<a class="logo" href="index.html" aria-label="Bosh sahifa"><img class="logo-img" alt="" hidden><b>IT</b><span class="lname">Al-Xorazmiy Vorislari</span></a>
+<div class="tools">
+<button class="ibtn" id="theme" type="button" aria-label="Qorong'i rejimga o'tish"><span class="moon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg></span><span class="sun"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></span></button>
+<a class="btn ghost sm" href="index.html">Saytga qaytish</a>
+<button class="btn sm" id="logout" type="button">Chiqish</button>
+</div></div></header>
+<main class="wrap amain" id="main">
+<div class="demo" id="demo" hidden><strong>DEMO rejim:</strong> backend ulanmagan, ma'lumotlar faqat shu brauzerda saqlanadi. Haqiqiy ishlash uchun <code>js/config.js</code> ichida <code>apiUrl</code> ni to'ldiring.</div>
+<div class="kpis">
+<div class="kpi" style="--c:var(--c1)"><small>Jami ro'yxatdan o'tganlar</small><strong id="k1">—</strong></div>
+<div class="kpi" style="--c:var(--c3)"><small>Oxirgi 24 soat</small><strong id="k2">—</strong></div>
+<div class="kpi" style="--c:var(--c2)"><small>Oxirgi 7 kun</small><strong id="k3">—</strong></div>
+<div class="kpi" style="--c:var(--c4)"><small>Xabarlar (aloqa)</small><strong id="k4">—</strong></div>
+</div>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" data-tab="registrations" aria-selected="true">Ro'yxatdan o'tganlar</button>
+<button class="tab" role="tab" data-tab="messages" aria-selected="false">Xabarlar</button>
+</div>
+<div class="toolbar">
+<input id="q" type="search" placeholder="Qidirish: ism, email, telefon…" aria-label="Qidirish">
+<select id="cf" aria-label="Yo'nalish bo'yicha filtr"><option value="">Barcha yo'nalishlar</option><option>Umumiy savol</option><option>Dasturlash</option><option>Dizayn</option><option>Kiberxavfsizlik</option><option>BPO / Call markaz</option><option>Ingliz tili</option></select>
+<button class="btn ghost sm" id="refresh" type="button">Yangilash</button>
+<button class="btn sm" id="export" type="button">CSV yuklab olish</button>
+</div>
+<div class="tw"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table><div class="empty" id="empty" hidden>Hozircha ma'lumot yo'q</div></div>
+<div class="pager"><span id="pinfo"></span><div><button class="btn ghost sm" id="prev" type="button">&larr; Oldingi</button><button class="btn ghost sm" id="next" type="button">Keyingi &rarr;</button></div></div>
+</main>
+</div>
+
+<dialog id="dlg"><h2 style="font-size:20px">O'chirishni tasdiqlang</h2><p id="dtext"></p>
+<form method="dialog"><button class="btn ghost sm" value="cancel">Bekor qilish</button><button class="btn sm dng" value="ok">O'chirish</button></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+
+
+
+
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/script.js"></script><script src="js/admin.js"></script></body></html>

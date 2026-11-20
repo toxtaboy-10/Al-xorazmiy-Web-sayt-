@@ -1,0 +1,48 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ro'yxatdan o'tish — Al-Xorazmiy Vorislari</title><script>try{var t=localStorage.getItem('theme');if(!t&&matchMedia('(prefers-color-scheme:dark)').matches)t='dark';document.documentElement.setAttribute('data-theme',t||'light')}catch(e){}</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/admin.css"></head><body class="">
+<div class="progress" id="prog"></div>
+<a class="skip" href="#main">Asosiy mazmunga o'tish</a>
+<header><div class="wrap bar">
+<a class="logo" href="index.html" aria-label="Al-Xorazmiy Vorislari bosh sahifa"><img class="logo-img" alt="" hidden><b>IT</b><span class="lname">Al-Xorazmiy Vorislari</span></a>
+<nav id="nav" aria-label="Asosiy menyu"><ul><li><a href="index.html">Bosh sahifa</a></li><li><a href="about.html">Biz haqimizda</a></li><li><a href="courses.html">Yo'nalishlar</a></li><li><a href="news.html">Yangiliklar</a></li><li><a href="contact.html">Aloqa</a></li></ul><div class="navcta"><a class="btn ghost" href="admin.html">Kirish</a><a class="btn" href="register.html">Ro'yxatdan o'tish</a></div></nav>
+<div class="tools">
+<button class="ibtn" id="theme" type="button" aria-label="Qorong'i rejimga o'tish"><span class="moon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg></span><span class="sun"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></span></button>
+<a class="btn ghost sm" href="admin.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>Kirish</a>
+<a class="btn sm" href="register.html">Ro'yxatdan o'tish</a>
+<button class="ibtn burger" id="burger" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></div></header>
+<main id="main">
+<div class="sub"><div class="wrap"><h1 style="animation:none;margin-top:0">Ro'yxatdan <span class="grad">o'tish</span></h1><p>Bir daqiqada ariza qoldiring, qolganini biz hal qilamiz.</p></div></div>
+<section><div class="wrap split" style="align-items:start">
+<div class="panel"><h2>Ma'lumotlaringiz</h2><p>Barcha maydonlar to'ldirilishi shart.</p>
+<form id="register-form" data-form="register" novalidate style="margin-top:18px">
+<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<label>Foydalanuvchi nomi<input name="username" data-v="username" autocomplete="username" placeholder="masalan: ali_valiyev" maxlength="24" required aria-describedby="username-err" aria-invalid="false"><span class="err" id="username-err"></span></label>
+<label>Email (Gmail)<input name="email" data-v="email" type="email" inputmode="email" autocomplete="email" placeholder="ism@gmail.com" required aria-describedby="email-err" aria-invalid="false"><span class="err" id="email-err"></span></label>
+<label>Telefon raqam<input name="phone" data-v="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998 90 123 45 67" required aria-describedby="phone-err" aria-invalid="false"><span class="err" id="phone-err"></span></label>
+<label>Parol<input name="password" data-v="password" type="password" autocomplete="new-password" placeholder="Kamida 6 ta belgi" maxlength="64" required aria-describedby="password-err" aria-invalid="false"><span class="err" id="password-err"></span></label>
+<label>Yo'nalish<select name="course" data-v="course" required aria-describedby="course-err" aria-invalid="false"><option value="">Tanlang</option><option>Dasturlash</option><option>Dizayn</option><option>Kiberxavfsizlik</option><option>BPO / Call markaz</option><option>Ingliz tili</option></select><span class="err" id="course-err"></span></label>
+<label class="chk"><input type="checkbox" name="consent" data-v="consent" aria-describedby="consent-err" aria-invalid="false"><span>Ma'lumotlarim ro'yxatga olinishi va men bilan bog'lanilishiga roziman</span></label>
+<span class="err" id="consent-err"></span>
+<button class="btn" type="submit">Ro'yxatdan o'tish</button>
+<div class="fail" role="alert" hidden></div>
+<div class="ok" role="status">Tabriklaymiz! Ro'yxatdan o'tdingiz. Endi <a class="link" href="admin.html">Kirish</a> sahifasidan foydalanuvchi nomi (yoki email) va parolingiz bilan kirishingiz mumkin.</div>
+</form></div>
+<div><h2>Keyingi qadamlar</h2><div class="steps"><div class="step"><b>1</b><div><strong>Ro'yxatdan o'ting</strong><p>Foydalanuvchi nomi, email, telefon raqam va parolingizni qoldiring.</p></div></div><div class="step"><b>2</b><div><strong>Biz bog'lanamiz</strong><p>Menejerimiz siz bilan telefon orqali bog'lanib, yo'nalishni aniqlashtiradi.</p></div></div><div class="step"><b>3</b><div><strong>O'qishni boshlang</strong><p>Yo'nalishni tanlab, amaliy mashg'ulotlarni boshlaysiz.</p></div></div></div>
+<p style="margin-top:18px">Allaqachon ro'yxatdan o'tganmisiz? <a class="link" href="admin.html">Kirish &rarr;</a><br>Savollaringiz bormi? <a class="link" href="contact.html">Aloqa sahifasiga o'ting &rarr;</a></p></div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="fg">
+<div><a class="logo" href="index.html" style="color:#fff"><img class="logo-img" alt="" hidden><b>IT</b><span class="lname">Al-Xorazmiy Vorislari</span></a>
+<p style="margin-top:12px;max-width:36ch">Zamonaviy IT ta'lim, rezidentlar uchun qulay muhit va yoshlar uchun yangi imkoniyatlar.</p>
+<div class="soc"><a data-social="instagram" aria-label="Instagram" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a><a data-social="telegram" aria-label="Telegram" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11l6 2.5L11 20l3-4 5 4z"/><path d="M9 13.5L21 4"/></svg></a></div></div>
+<div><h4>Sahifalar</h4><ul><li><a href="index.html">Bosh sahifa</a></li><li><a href="about.html">Biz haqimizda</a></li><li><a href="courses.html">Yo'nalishlar</a></li><li><a href="news.html">Yangiliklar</a></li><li><a href="contact.html">Aloqa</a></li><li><a href="register.html">Ro'yxatdan o'tish</a></li><li><a href="admin.html">Kirish</a></li></ul></div>
+<div><h4>Aloqa</h4><ul><li data-hide-empty><a data-cfg="phone" href="#"></a></li><li data-hide-empty><a data-cfg="email" href="#"></a></li><li data-hide-empty data-cfg="address"></li><li data-hide-empty data-cfg="hours"></li></ul></div>
+</div>
+<div class="copy"><span>&copy; <span data-year>2026</span> Al-Xorazmiy Vorislari. Barcha huquqlar himoyalangan.</span><span>Instagram va Telegram orqali biz bilan qoling</span></div>
+</div></footer>
+<button class="totop" id="totop" type="button" aria-label="Yuqoriga qaytish"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+
+
+
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/script.js"></script></body></html>
